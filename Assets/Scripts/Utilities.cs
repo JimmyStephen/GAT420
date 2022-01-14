@@ -11,6 +11,12 @@ public static class Utilities
         if (result.x > max.x) result.x = min.x;
         if (result.x < min.x) result.x = max.x;
 
+        if (result.y > max.y) result.y = min.y;
+        if (result.y < min.y) result.y = max.y;
+
+        if (result.z > max.z) result.z = min.z;
+        if (result.z < min.z) result.z = max.z;
+
         return result;
     }
 

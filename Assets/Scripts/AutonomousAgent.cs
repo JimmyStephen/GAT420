@@ -5,9 +5,13 @@ using UnityEngine;
 public class AutonomousAgent : Agent
 {
     [SerializeField] Perception perception;
+    [SerializeField] Perception flockPerception;
     [SerializeField] Steering steering;
-    public float maxSpeed;
-    public float maxForce;
+    [SerializeField] AutonomousAgentData agentData;
+
+    public float maxSpeed { get { return agentData.maxSpeed; } }
+    public float maxForce { get { return agentData.maxForce; } }
+    
     public Vector3 velocity { get; set; } = Vector3.zero;
 
 
@@ -17,16 +21,27 @@ public class AutonomousAgent : Agent
 
 
         GameObject[] gameObjects = perception.GetGameObjects();
+        //wander
         if (gameObjects.Length == 0)
         {
             acceleration += steering.Wander(this);
         }
+        //seek / flee (player)
         if (gameObjects.Length != 0)
         {
-            Debug.DrawLine(transform.position, gameObjects[0].transform.position);
-
-            Vector3 force = steering.Flee(this, gameObjects[0]);
-            acceleration += force.normalized;
+            acceleration += steering.Seek(this, gameObjects[0]) * agentData.seekWeight;
+            acceleration += steering.Flee(this, gameObjects[0]) * agentData.fleeWeight;
+        }
+        //flocking
+        gameObjects = flockPerception.GetGameObjects();
+        if(gameObjects.Length != 0)
+        {
+            //collect
+            acceleration += steering.Cohesion(this, gameObjects) * agentData.cohesionWeight;
+            //seperate
+            acceleration += steering.Seperation(this, gameObjects, agentData.separationRadius) * agentData.separationWeight;
+            //align
+            acceleration += steering.Alignment(this, gameObjects) * agentData.alignmentWeight;
         }
 
         velocity += acceleration * Time.deltaTime;
