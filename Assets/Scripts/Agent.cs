@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class Agent : MonoBehaviour
 {
-    private void Update()
-    {
-
-    }
+    public Movement movement;
 }
