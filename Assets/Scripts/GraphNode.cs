@@ -5,17 +5,21 @@ using UnityEngine;
 
 public class GraphNode : Node
 {
+    public struct Edge
+    {
+        public GraphNode nodeA;
+        public GraphNode nodeB;
+    }
 
     public GraphNode parent { get; set; } = null;
     public bool visited { get; set; } = false;
-    public float cost { get; set; } = float.MaxValue;
-    public List<GraphNode> neighbors { get; set; } = new List<GraphNode>();
+    public List<Edge> edges { get; set; } = new List<Edge>();
 
     public static void UnlinkNodes()
     {
         // clear all nodes edges
         var nodes = GetNodes<GraphNode>();
-        nodes.ToList().ForEach(node => node.neighbors.Clear());
+        nodes.ToList().ForEach(node => node.edges.Clear());
     }
 
     public static void LinkNodes(float radius)
@@ -35,7 +39,13 @@ public class GraphNode : Node
             GraphNode colliderNode = collider.GetComponent<GraphNode>();
             if (colliderNode != null && colliderNode != node)
             {
-                node.neighbors.Add(colliderNode);
+                // create edge from node to collider node
+                Edge edge;
+                edge.nodeA = node;
+                edge.nodeB = colliderNode;
+
+                // add edge to node edges
+                node.edges.Add(edge);
             }
         }
     }
@@ -44,22 +54,6 @@ public class GraphNode : Node
     {
         // reset nodes visited and parent
         var nodes = GetNodes<GraphNode>();
-        nodes.ToList().ForEach(node => { node.visited = false; node.parent = null; node.cost = float.MaxValue; });
-    }
-
-    public float DistanceTo(GraphNode node)
-    {
-        return Vector3.Distance(transform.position, node.transform.position);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.TryGetComponent<SearchAgent>(out SearchAgent searchAgent))
-        {
-            if (searchAgent.targetNode == this)
-            {
-                searchAgent.targetNode = searchAgent.GetNextNode(this);
-            }
-        }
+        nodes.ToList().ForEach(node => { node.visited = false; node.parent = null; });
     }
 }
