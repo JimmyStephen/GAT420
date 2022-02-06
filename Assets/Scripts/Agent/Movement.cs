@@ -14,9 +14,9 @@ public abstract class Movement : MonoBehaviour
     public virtual Vector3 acceleration { get; set; } = Vector3.zero;
     public virtual Vector3 direction { get { return velocity.normalized; } }
 
-    public abstract void MoveTowards(Vector3 target);
     public abstract void ApplyForce(Vector3 force);
-    public abstract void Stop();
+    public abstract void MoveTowards(Vector3 target);
     public abstract void Resume();
+    public abstract void Stop();
 }
 
