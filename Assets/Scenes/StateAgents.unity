@@ -1800,6 +1800,10 @@ PrefabInstance:
       propertyPath: perception
       value: 
       objectReference: {fileID: 1060728217787037552}
+    - target: {fileID: -4293502768454447577, guid: 02bcca2be6f35c44194bd05c36dd7f47, type: 3}
+      propertyPath: health.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3599664054193693816, guid: 02bcca2be6f35c44194bd05c36dd7f47, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1847,6 +1851,10 @@ PrefabInstance:
     - target: {fileID: 3599664054193693820, guid: 02bcca2be6f35c44194bd05c36dd7f47, type: 3}
       propertyPath: m_Name
       value: StateAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971589878908513559, guid: 02bcca2be6f35c44194bd05c36dd7f47, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6276076957061498706, guid: 02bcca2be6f35c44194bd05c36dd7f47, type: 3}
       propertyPath: distance

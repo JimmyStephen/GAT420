@@ -1,47 +1,12 @@
 fileFormatVersion: 2
-guid: fb3d2fd75a98c2944b08157a7ba63046
+guid: e3646fc44b42bc64f921cf23c10d1a4f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Character_Fat_Elvis_body_color
-    second: {fileID: 2100000, guid: 2ce25aedb97824b4cbc290a6479063c2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Elvis_Brows_MAT
-    second: {fileID: 2100000, guid: 220659064c5c1aa4dbc5d7ab4966bbaf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Elvis_Eyes_MAT
-    second: {fileID: 2100000, guid: 875479c6d44c67344addc69b64c0ceaa, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Elvis_Mouth_MAT
-    second: {fileID: 2100000, guid: cf47e8c0e3423ca49ae71499f9ca9aad, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Elvis_FaceAnimMap
-    second: {fileID: 2800000, guid: 11215183f76478b4483845f23cb901f0, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: FatElvis_diffuse
-    second: {fileID: 2800000, guid: 9e3b6fc6a1f53494dacc99e9bee78b5b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: FatElvis_normal
-    second: {fileID: 2800000, guid: 3d8aea35c8332a04ab228a30508b7e91, type: 3}
+    second: Standing Death Forward 01
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -56,7 +21,10 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'newVegas:Hair_Front' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -68,7 +36,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Standing Death Forward 01
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 95
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -110,11 +107,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 2e59d00e19f77524f9d1a857942103ad
-  - cc1907674e4055d408de94c5f2336501
-  - e3646fc44b42bc64f921cf23c10d1a4f
-  - df4157e05c279a84185da426dd64e93f
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -288,7 +281,7 @@ ModelImporter:
         length: 0
         modified: 0
     - boneName: newVegas:Hair_Front1
-      humanName: RightEye
+      humanName: LeftEye
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
@@ -552,40 +545,15 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: bigvegas(Clone)
+    - name: bigvegas@Standing Death Forward 01(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: newVegas:Elvis_BodyGeo
-      parentName: bigvegas(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: newVegas:Elvis_MouthAnimGeo
-      parentName: bigvegas(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: newVegas:Elvis_BrowsAnimGeo
-      parentName: bigvegas(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: newVegas:Elvis_EyesAnimGeo
-      parentName: bigvegas(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Hips
-      parentName: bigvegas(Clone)
-      position: {x: 0.00000018072258, y: 0.9622668, z: 0.04387451}
-      rotation: {x: 1.0060071e-15, y: 0.000000005221964, z: -0.0000001563591, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: newVegas:ElvisFacialAnim_Joint
-      parentName: newVegas:Hips
-      position: {x: -0.01, y: -0.95330054, z: -0.08825774}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      parentName: bigvegas@Standing Death Forward 01(Clone)
+      position: {x: 0.0053662136, y: 0.9356204, z: 0.010488503}
+      rotation: {x: 0.0036886707, y: 0.025506552, z: -0.026926529, w: 0.9993051}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Pelvis
       parentName: newVegas:Hips
@@ -594,402 +562,407 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftUpLeg
       parentName: newVegas:Pelvis
-      position: {x: -0.18735231, y: -0.05666687, z: -0.04541196}
-      rotation: {x: -0.03546647, y: 0.0012154634, z: 0.034227163, w: 0.9987838}
+      position: {x: -0.187352, y: -0.056666996, z: -0.045412}
+      rotation: {x: -0.09238479, y: -0.15035711, z: -0.023745976, w: 0.9840193}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftLeg
       parentName: newVegas:LeftUpLeg
-      position: {x: -0.02165257, y: -0.3186466, z: 0.004930506}
-      rotation: {x: 0.049733188, y: -0.0034221595, z: -0.000000105977094, w: 0.9987567}
+      position: {x: -0.021652998, y: -0.318647, z: 0.0049309996}
+      rotation: {x: 0.25699285, y: 0.054569207, z: 0.028823616, w: 0.9644408}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftFoot
       parentName: newVegas:LeftLeg
-      position: {x: -0.0220756, y: -0.3186177, z: -0.043362916}
-      rotation: {x: -0.014367499, y: 0.00050182163, z: -0.03424526, w: 0.9993101}
+      position: {x: -0.022076001, y: -0.318618, z: -0.043362997}
+      rotation: {x: -0.1988664, y: -0.013172202, z: 0.0024621366, w: 0.97993505}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftToeBase
       parentName: newVegas:LeftFoot
-      position: {x: -0.009429804, y: -0.26721954, z: 0.15023476}
+      position: {x: -0.00943, y: -0.26722, z: 0.150235}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_PantLeg
       parentName: newVegas:LeftLeg
-      position: {x: -0.012814821, y: -0.08977983, z: -0.0110887}
+      position: {x: -0.012815, y: -0.089779995, z: -0.011088999}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightUpLeg
       parentName: newVegas:Pelvis
-      position: {x: 0.18735231, y: -0.05666687, z: -0.04541196}
-      rotation: {x: -0.035461303, y: -0.0012152625, z: -0.03422645, w: 0.99878407}
+      position: {x: 0.187352, y: -0.056666996, z: -0.045412}
+      rotation: {x: -0.09061289, y: 0.22600104, z: 0.10233695, w: 0.9644895}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightLeg
       parentName: newVegas:RightUpLeg
-      position: {x: 0.02167511, y: -0.31864506, z: 0.004930694}
-      rotation: {x: 0.049724095, y: 0.003420482, z: 0.000000104276296, w: 0.9987572}
+      position: {x: 0.021675, y: -0.318645, z: 0.0049309996}
+      rotation: {x: 0.23736936, y: -0.04006347, z: -0.01023902, w: 0.970539}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightFoot
       parentName: newVegas:RightLeg
-      position: {x: 0.022053057, y: -0.31861922, z: -0.0433631}
-      rotation: {x: -0.014363497, y: -0.00050069863, z: 0.03424483, w: 0.99931014}
+      position: {x: 0.022053, y: -0.31861898, z: -0.043362997}
+      rotation: {x: -0.17275117, y: -0.030218476, z: -0.06701809, w: 0.98221815}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightToeBase
       parentName: newVegas:RightFoot
-      position: {x: 0.009429804, y: -0.26721954, z: 0.15023476}
+      position: {x: 0.00943, y: -0.26722, z: 0.150235}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_PantLeg
       parentName: newVegas:RightLeg
-      position: {x: 0.012792575, y: -0.089781605, z: -0.011088875}
+      position: {x: 0.012793, y: -0.089782, z: -0.011088999}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Spine
       parentName: newVegas:Hips
-      position: {x: -0, y: 0.10200042, z: -0.0029954624}
-      rotation: {x: -1.0060024e-15, y: -0.000000005221964, z: 0.00000015635818, w: 1}
+      position: {x: -0, y: 0.102, z: -0.0029949998}
+      rotation: {x: 0.13114865, y: -0.0012819686, z: 0.037462234, w: 0.9906538}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Spine1
       parentName: newVegas:Spine
-      position: {x: -0, y: 0.11900047, z: -0.015166037}
-      rotation: {x: 3.8774097e-26, y: -4.263257e-14, z: 6.82121e-13, w: 1}
+      position: {x: -0, y: 0.118999995, z: -0.0151659995}
+      rotation: {x: 0.051089946, y: -0.006229916, z: 0.02415772, w: 0.9983824}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Spine2
       parentName: newVegas:Spine1
-      position: {x: -0, y: 0.13600044, z: -0.028425187}
-      rotation: {x: 0, y: 0, z: 8.2652e-40, w: 1}
+      position: {x: -0, y: 0.136, z: -0.028424999}
+      rotation: {x: 0.051033683, y: -0.0069280877, z: 0.024592774, w: 0.99837005}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Neck
       parentName: newVegas:Spine2
-      position: {x: -0, y: 0.09624111, z: -0.028900912}
-      rotation: {x: 0, y: 0, z: 8.2652e-40, w: 1}
+      position: {x: -0, y: 0.096241, z: -0.028901}
+      rotation: {x: -0.0062588286, y: -0.002721488, z: -0.006458688, w: 0.9999559}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Head
       parentName: newVegas:Neck
-      position: {x: -0, y: 0.14068773, z: -0.0135186035}
-      rotation: {x: 0, y: 0, z: 8.2652e-40, w: 1}
+      position: {x: -0, y: 0.140688, z: -0.013518999}
+      rotation: {x: -0.006258891, y: -0.0027216042, z: -0.006458687, w: 0.9999559}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Hair_Back
       parentName: newVegas:Head
-      position: {x: -0, y: 0.032318734, z: -0.17524774}
+      position: {x: -0, y: 0.032318998, z: -0.17524798}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Hair_Front
       parentName: newVegas:Head
-      position: {x: -0, y: 0.31260446, z: 0.045737643}
-      rotation: {x: 0, y: 0, z: 8.2652e-40, w: 1}
+      position: {x: -0, y: 0.312604, z: 0.045738}
+      rotation: {x: -0.006258304, y: -0.0027214822, z: -0.006458728, w: 0.9999559}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Hair_Front1
       parentName: newVegas:Hair_Front
-      position: {x: 5.2729313e-17, y: 0.022840671, z: 0.11993284}
-      rotation: {x: 0, y: 0, z: 8.2652e-40, w: 1}
+      position: {x: -0, y: 0.022841, z: 0.119933}
+      rotation: {x: -0.0062588817, y: -0.0027215816, z: -0.006458645, w: 0.9999559}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Hair_Front2
       parentName: newVegas:Hair_Front1
-      position: {x: 5.2729313e-17, y: 0.02284073, z: 0.11993283}
+      position: {x: -0, y: 0.022841, z: 0.119933}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Jowel
       parentName: newVegas:Head
-      position: {x: -0, y: -0.07458241, z: 0.068641216}
+      position: {x: -0, y: -0.074581996, z: 0.068641}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftShoulder
       parentName: newVegas:Spine2
-      position: {x: -0.15263036, y: 0.10923431, z: -0.005477052}
-      rotation: {x: -0.000000048318995, y: 0.0769163, z: -0.016706124, w: 0.99689764}
+      position: {x: -0.15262999, y: 0.109234, z: -0.0054769996}
+      rotation: {x: 0.04089281, y: 0.10949698, z: 0.026052212, w: 0.9928039}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftArm
       parentName: newVegas:LeftShoulder
-      position: {x: -0.2543864, y: -0.028306436, z: -0.13032502}
-      rotation: {x: -0.00064898113, y: 0.0400895, z: 0.008270966, w: 0.9991617}
+      position: {x: -0.254386, y: -0.028306, z: -0.130325}
+      rotation: {x: -0.35108858, y: -0.021904968, z: -0.119605616, w: 0.92841345}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftForeArm
       parentName: newVegas:LeftArm
-      position: {x: -0.29593837, y: 2.842171e-16, z: -0.046732027}
-      rotation: {x: -0.000000059493154, y: -0.095300905, z: -0.0000000036438867, w: 0.9954485}
+      position: {x: -0.295938, y: 0, z: -0.046732}
+      rotation: {x: -0.0042212903, y: -0.063492894, z: -0.017692465, w: 0.99781656}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHand
       parentName: newVegas:LeftForeArm
-      position: {x: -0.2783289, y: -2.842171e-16, z: 0.0095426645}
-      rotation: {x: 0.044137444, y: 0.035632886, z: 0.0066553717, w: 0.9983676}
+      position: {x: -0.27832898, y: 0, z: 0.009543}
+      rotation: {x: -0.045838043, y: 0.03692853, z: 0.0032102624, w: 0.9982609}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandThumb1
       parentName: newVegas:LeftHand
-      position: {x: -0.047674563, y: -0.026766764, z: 0.06397402}
-      rotation: {x: -0.024881238, y: 0.16170704, z: 0.032273013, w: 0.98599714}
+      position: {x: -0.047675, y: -0.026767, z: 0.063974}
+      rotation: {x: 0.2828902, y: 0.1913112, z: 0.0019754113, w: 0.9398773}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandThumb2
       parentName: newVegas:LeftHandThumb1
-      position: {x: -0.0662581, y: -0.0022351788, z: 0.024714211}
-      rotation: {x: 0.0052098865, y: 0.06203734, z: 0.019577999, w: 0.99786824}
+      position: {x: -0.066258, y: -0.002235, z: 0.024714}
+      rotation: {x: 0.0017049611, y: 0.032777578, z: 0.015214026, w: 0.9993454}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandThumb3
       parentName: newVegas:LeftHandThumb2
-      position: {x: -0.064811975, y: 0.00059347274, z: 0.015367952}
+      position: {x: -0.064812, y: 0.000593, z: 0.015368}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandIndex1
       parentName: newVegas:LeftHand
-      position: {x: -0.1876193, y: 0.0017839572, z: 0.045311183}
-      rotation: {x: 0.0018701227, y: -0.0340778, z: -0.061555706, w: 0.99751997}
+      position: {x: -0.187619, y: 0.001784, z: 0.045310996}
+      rotation: {x: 0.046956986, y: -0.032639023, z: -0.00080168253, w: 0.9983632}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandIndex2
       parentName: newVegas:LeftHandIndex1
-      position: {x: -0.031712204, y: -0.0035048022, z: 0.0009766979}
-      rotation: {x: 0.00642433, y: -0.04414974, z: 0.050140183, w: 0.9977452}
+      position: {x: -0.031712, y: -0.003505, z: 0.000977}
+      rotation: {x: 0.012164367, y: -0.04401186, z: 0.054113474, w: 0.9974902}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandIndex3
       parentName: newVegas:LeftHandIndex2
-      position: {x: -0.038076222, y: -0.00034588756, z: 0.0045739114}
+      position: {x: -0.038076, y: -0.000346, z: 0.004574}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandMiddle1
       parentName: newVegas:LeftHand
-      position: {x: -0.18461424, y: 0.0024342695, z: -0.0069564846}
-      rotation: {x: 0.0019491474, y: -0.001862626, z: -0.052382212, w: 0.9986235}
+      position: {x: -0.18461399, y: 0.002434, z: -0.0069559994}
+      rotation: {x: -0.045513462, y: -0.0011470168, z: 0.005823715, w: 0.9989461}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandMiddle2
       parentName: newVegas:LeftHandMiddle1
-      position: {x: -0.033089597, y: -0.0030445114, z: -0.0011225148}
-      rotation: {x: -0.0035088647, y: 0.018954707, z: 0.051995564, w: 0.99846125}
+      position: {x: -0.03309, y: -0.0030450001, z: -0.0011229999}
+      rotation: {x: -0.009434475, y: 0.018277215, z: 0.057293326, w: 0.9981455}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandMiddle3
       parentName: newVegas:LeftHandMiddle2
-      position: {x: -0.04584319, y: 0.00057678384, z: -0.0033044328}
+      position: {x: -0.045842998, y: 0.00057699997, z: -0.0033039998}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandRing1
       parentName: newVegas:LeftHand
-      position: {x: -0.17563905, y: -0.00015574877, z: -0.048606668}
-      rotation: {x: 0.0062868632, y: 0.08291735, z: -0.13784043, w: 0.98695755}
+      position: {x: -0.17563899, y: -0.000156, z: -0.048607}
+      rotation: {x: -0.12900098, y: 0.067012765, z: -0.09254148, w: 0.9850402}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandRing2
       parentName: newVegas:LeftHandRing1
-      position: {x: -0.025824346, y: -0.0071015223, z: -0.005449932}
-      rotation: {x: -0.04038712, y: 0.03626273, z: 0.14411353, w: 0.9880715}
+      position: {x: -0.025824001, y: -0.007102, z: -0.00545}
+      rotation: {x: -0.024767255, y: 0.036430303, z: 0.16242835, w: 0.98573655}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandRing3
       parentName: newVegas:LeftHandRing2
-      position: {x: -0.030503482, y: 0.0011914361, z: -0.008848294}
+      position: {x: -0.030502997, y: 0.001191, z: -0.008848}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandPinky1
       parentName: newVegas:LeftHand
-      position: {x: -0.15713014, y: -0.010582739, z: -0.08049928}
-      rotation: {x: 0.005296328, y: 0.206553, z: -0.06828945, w: 0.976035}
+      position: {x: -0.15713, y: -0.010583, z: -0.080499}
+      rotation: {x: -0.22028686, y: 0.18824375, z: -0.05722243, w: 0.95538664}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandPinky2
       parentName: newVegas:LeftHandPinky1
-      position: {x: -0.022625562, y: -0.003089046, z: -0.011097922}
-      rotation: {x: -0.0177133, y: 0.033946242, z: 0.026664456, w: 0.99891084}
+      position: {x: -0.022626, y: -0.003089, z: -0.011097999}
+      rotation: {x: -0.01346612, y: 0.034038424, z: 0.036370628, w: 0.9986678}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:LeftHandPinky3
       parentName: newVegas:LeftHandPinky2
-      position: {x: -0.022406654, y: -0.0015086611, z: -0.0129644675}
+      position: {x: -0.022406999, y: -0.0015090001, z: -0.012963999}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_Sleeve
       parentName: newVegas:LeftForeArm
-      position: {x: -0.0024748535, y: -0.0064977948, z: 0.0058645955}
+      position: {x: -0.002475, y: -0.0064979997, z: 0.0058649997}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_CapeC
       parentName: newVegas:LeftForeArm
-      position: {x: -0.15944378, y: -0.08608823, z: -0.06393339}
+      position: {x: -0.15944399, y: -0.086087994, z: -0.063933}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_CapeC1
       parentName: newVegas:Left_CapeC
-      position: {x: 0.000000034326, y: -0.08688509, z: 0.0000000139330405}
+      position: {x: -0, y: -0.086885005, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_CapeB
       parentName: newVegas:LeftArm
-      position: {x: -0.24694456, y: -0.08608823, z: -0.11066541}
+      position: {x: -0.246945, y: -0.086087994, z: -0.11066499}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_CapeB1
       parentName: newVegas:Left_CapeB
-      position: {x: -0.00000006382597, y: -0.08688509, z: 0.000000013788624}
+      position: {x: -0, y: -0.086885005, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_CapeA
       parentName: newVegas:LeftArm
-      position: {x: -0.034314502, y: -0.08608823, z: -0.11066541}
+      position: {x: -0.034314997, y: -0.086087994, z: -0.11066499}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_CapeA1
       parentName: newVegas:Left_CapeA
-      position: {x: -2.1316282e-16, y: -0.08688509, z: -3.5527136e-17}
+      position: {x: -0, y: -0.086885005, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightShoulder
       parentName: newVegas:Spine2
-      position: {x: 0.15263036, y: 0.10923431, z: -0.005477052}
-      rotation: {x: -0.000000011100736, y: -0.076916285, z: 0.016706103, w: 0.99689764}
+      position: {x: 0.15262999, y: 0.109234, z: -0.0054769996}
+      rotation: {x: 0.009916797, y: -0.09753809, z: -0.062582895, w: 0.9932127}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightArm
       parentName: newVegas:RightShoulder
-      position: {x: 0.2543864, y: -0.028306434, z: -0.130325}
-      rotation: {x: -0.0006490029, y: -0.040089507, z: -0.008270878, w: 0.9991617}
+      position: {x: 0.254386, y: -0.028306, z: -0.130325}
+      rotation: {x: 0.06599803, y: 0.0076346854, z: -0.019324945, w: 0.9976034}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightForeArm
       parentName: newVegas:RightArm
-      position: {x: 0.2959384, y: -3.9790393e-15, z: -0.046732027}
-      rotation: {x: -0.00000005949315, y: 0.095300905, z: 0.0000000036438825, w: 0.9954485}
+      position: {x: 0.295938, y: 0, z: -0.046732}
+      rotation: {x: -0.15302467, y: 0.066220745, z: 0.021578787, w: 0.985765}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHand
       parentName: newVegas:RightForeArm
-      position: {x: 0.2783289, y: -7.673861e-15, z: 0.009542664}
-      rotation: {x: 0.044137444, y: -0.035632886, z: -0.0066553717, w: 0.9983676}
+      position: {x: 0.27832898, y: 0, z: 0.009543}
+      rotation: {x: -0.21159667, y: -0.09038235, z: 0.07933051, w: 0.9699302}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandThumb1
       parentName: newVegas:RightHand
-      position: {x: 0.047674563, y: -0.026766764, z: 0.06397403}
-      rotation: {x: -0.024881389, y: -0.16170718, z: -0.032272726, w: 0.985997}
+      position: {x: 0.047675, y: -0.026767, z: 0.063974}
+      rotation: {x: -0.07402498, y: -0.14698248, z: -0.13686259, w: 0.97682405}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandThumb2
       parentName: newVegas:RightHandThumb1
-      position: {x: 0.0662581, y: -0.002235179, z: 0.024714211}
-      rotation: {x: 0.005209894, y: -0.06203733, z: -0.019577947, w: 0.99786824}
+      position: {x: 0.066258, y: -0.002235, z: 0.024714}
+      rotation: {x: -0.023807518, y: -0.029942736, z: -0.021912143, w: 0.99902785}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandThumb3
       parentName: newVegas:RightHandThumb2
-      position: {x: 0.064811975, y: 0.0005934728, z: 0.015367953}
+      position: {x: 0.064812, y: 0.000593, z: 0.015368}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandIndex1
       parentName: newVegas:RightHand
-      position: {x: 0.1876193, y: 0.0017839572, z: 0.045311183}
-      rotation: {x: 0.001870063, y: 0.0340778, z: 0.061555706, w: 0.99751997}
+      position: {x: 0.187619, y: 0.001784, z: 0.045310996}
+      rotation: {x: 0.0011637829, y: 0.028912632, z: 0.05556713, w: 0.99803555}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandIndex2
       parentName: newVegas:RightHandIndex1
-      position: {x: 0.031712204, y: -0.0035048025, z: 0.0009766979}
-      rotation: {x: 0.00642439, y: 0.044149738, z: -0.050140183, w: 0.9977452}
+      position: {x: 0.031712, y: -0.003505, z: 0.000977}
+      rotation: {x: 0.009452054, y: 0.04083892, z: -0.09121704, w: 0.9949484}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandIndex3
       parentName: newVegas:RightHandIndex2
-      position: {x: 0.038076226, y: -0.00034588756, z: 0.0045739114}
+      position: {x: 0.038076, y: -0.000346, z: 0.004574}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandMiddle1
       parentName: newVegas:RightHand
-      position: {x: 0.18461424, y: 0.0024342695, z: -0.006956486}
-      rotation: {x: 0.0019491474, y: 0.001862626, z: 0.052382212, w: 0.9986235}
+      position: {x: 0.18461399, y: 0.002434, z: -0.0069559994}
+      rotation: {x: 0.0047542946, y: 0.050842427, z: 0.025355149, w: 0.9983735}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandMiddle2
       parentName: newVegas:RightHandMiddle1
-      position: {x: 0.0330896, y: -0.0030445114, z: -0.0011225148}
-      rotation: {x: -0.0035088647, y: -0.018954707, z: -0.051995564, w: 0.99846125}
+      position: {x: 0.03309, y: -0.0030450001, z: -0.0011229999}
+      rotation: {x: -0.00062514684, y: -0.015934935, z: -0.08480675, w: 0.99626976}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandMiddle3
       parentName: newVegas:RightHandMiddle2
-      position: {x: 0.04584319, y: 0.0005767838, z: -0.0033044326}
+      position: {x: 0.045842998, y: 0.00057699997, z: -0.0033039998}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandRing1
       parentName: newVegas:RightHand
-      position: {x: 0.17563905, y: -0.00015574877, z: -0.048606668}
-      rotation: {x: 0.0062868632, y: -0.08291735, z: 0.13784043, w: 0.98695755}
+      position: {x: 0.17563899, y: -0.000156, z: -0.048607}
+      rotation: {x: 0.018289883, y: -0.009600187, z: 0.10367033, w: 0.9943972}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandRing2
       parentName: newVegas:RightHandRing1
-      position: {x: 0.025824346, y: -0.0071015223, z: -0.005449932}
-      rotation: {x: -0.04038712, y: -0.03626273, z: -0.14411353, w: 0.9880715}
+      position: {x: 0.025824001, y: -0.007102, z: -0.00545}
+      rotation: {x: -0.04009806, y: -0.03412281, z: -0.17619722, w: 0.98294574}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandRing3
       parentName: newVegas:RightHandRing2
-      position: {x: 0.03050348, y: 0.0011914361, z: -0.008848294}
+      position: {x: 0.030502997, y: 0.001191, z: -0.008848}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandPinky1
       parentName: newVegas:RightHand
-      position: {x: 0.15713014, y: -0.010582739, z: -0.08049928}
-      rotation: {x: 0.0052963737, y: -0.206553, z: 0.068289444, w: 0.976035}
+      position: {x: 0.15713, y: -0.010583, z: -0.080499}
+      rotation: {x: 0.00005453823, y: -0.14368449, z: 0.025221003, w: 0.9893021}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandPinky2
       parentName: newVegas:RightHandPinky1
-      position: {x: 0.02262556, y: -0.003089046, z: -0.011097921}
-      rotation: {x: -0.017713342, y: -0.033946227, z: -0.02666444, w: 0.99891084}
+      position: {x: 0.022626, y: -0.003089, z: -0.011097999}
+      rotation: {x: -0.011027173, y: -0.033482183, z: -0.07005767, w: 0.99691993}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:RightHandPinky3
       parentName: newVegas:RightHandPinky2
-      position: {x: 0.022406654, y: -0.0015086611, z: -0.012964468}
+      position: {x: 0.022406999, y: -0.0015090001, z: -0.012963999}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_CapeC
       parentName: newVegas:RightForeArm
-      position: {x: 0.15944378, y: -0.08608823, z: -0.06393339}
+      position: {x: 0.15944399, y: -0.086087994, z: -0.063933}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_CapeC1
       parentName: newVegas:Right_CapeC
-      position: {x: -2.7000624e-15, y: -0.08688509, z: 2.4868996e-16}
+      position: {x: -0, y: -0.086885005, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_Sleeve
       parentName: newVegas:RightForeArm
-      position: {x: 0.0024748666, y: -0.006499779, z: 0.005865046}
+      position: {x: 0.002475, y: -0.0064999997, z: 0.0058649997}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_CapeA
       parentName: newVegas:RightArm
-      position: {x: 0.0343145, y: -0.08608823, z: -0.11066541}
+      position: {x: 0.034314, y: -0.086087994, z: -0.11066499}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_CapeA1
       parentName: newVegas:Right_CapeA
-      position: {x: -1.065814e-15, y: -0.08688509, z: 2.1316282e-16}
+      position: {x: -0, y: -0.086885005, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_CapeB
       parentName: newVegas:RightArm
-      position: {x: 0.24694324, y: -0.08608823, z: -0.11066541}
+      position: {x: 0.246943, y: -0.086087994, z: -0.11066499}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_CapeB1
       parentName: newVegas:Right_CapeB
-      position: {x: 0.000000092962765, y: -0.08688509, z: 0.000000013765875}
+      position: {x: -0, y: -0.086885005, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_Collar
       parentName: newVegas:Spine2
-      position: {x: -0.18625118, y: 0.08655498, z: 0.088281125}
+      position: {x: -0.18625098, y: 0.086555004, z: 0.088281}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_Collar1
       parentName: newVegas:Left_Collar
-      position: {x: -0.14783402, y: 0.105403565, z: -0.012594815}
+      position: {x: -0.14783399, y: 0.10540399, z: -0.012595}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Collar_Back
       parentName: newVegas:Spine2
-      position: {x: -8.730978e-17, y: 0.15630701, z: -0.20132616}
+      position: {x: -0, y: 0.156307, z: -0.201326}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Left_Peck
       parentName: newVegas:Spine2
-      position: {x: -0.17239556, y: -0.051326208, z: 0.25482586}
+      position: {x: -0.17239599, y: -0.051325995, z: 0.25482598}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_Peck
       parentName: newVegas:Spine2
-      position: {x: 0.17239599, y: -0.051321898, z: 0.25482592}
+      position: {x: 0.17239599, y: -0.051322, z: 0.25482598}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_Collar
       parentName: newVegas:Spine2
-      position: {x: 0.18625098, y: 0.0865581, z: 0.088280946}
+      position: {x: 0.18625098, y: 0.086558, z: 0.088281}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Right_Collar1
       parentName: newVegas:Right_Collar
-      position: {x: 0.14783405, y: 0.10539992, z: -0.0125950165}
+      position: {x: 0.14783399, y: 0.105399996, z: -0.012595}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: newVegas:Belly
       parentName: newVegas:Spine
-      position: {x: -0, y: -0.06540393, z: 0.090142526}
+      position: {x: -0, y: -0.065404, z: 0.090143}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: newVegas:ElvisFacialAnim_Joint
+      parentName: newVegas:Hips
+      position: {x: -0.01, y: -0.953301, z: -0.088258}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
