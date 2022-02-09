@@ -25,7 +25,7 @@ public class PatrolState : State
         owner.pathFollower.Move(owner.movement);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            owner.stateMachine.setState(owner.stateMachine.StateFromName("idle"));
+            owner.stateMachine.setState(owner.stateMachine.StateFromName(typeof(IdleState).Name));
         }
     }
 }

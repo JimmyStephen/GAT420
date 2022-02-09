@@ -42,7 +42,7 @@ public class StateAgent : Agent
         stateMachine.AddTransition(typeof(PatrolState).Name, new FloatTransition(health, Transition.Predicate.LESS_EQUAL, 0), typeof(DeathState).Name);
 
         //Attack State
-        stateMachine.AddTransition(typeof(ChaseState).Name,  new FloatTransition(health, Transition.Predicate.LESS_EQUAL, 1), typeof(AttackState).Name);
+        stateMachine.AddTransition(typeof(ChaseState).Name,  new FloatTransition(enemyDistance, Transition.Predicate.LESS_EQUAL, 2), typeof(AttackState).Name);
         
         stateMachine.setState(stateMachine.StateFromName(typeof(IdleState).Name));
     }
