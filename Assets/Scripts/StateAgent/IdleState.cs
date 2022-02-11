@@ -21,6 +21,5 @@ public class IdleState : State
 
     public override void OnUpdate()
     {
-        owner.timer.value -= Time.deltaTime;
     }
 }

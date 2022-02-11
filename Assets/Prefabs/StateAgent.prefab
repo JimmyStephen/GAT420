@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -4293502768454447577}
   - component: {fileID: 4025873590126698686}
   - component: {fileID: 8564771326405957857}
-  - component: {fileID: 6276076957061498706}
+  - component: {fileID: 3467788456311001928}
   - component: {fileID: 5643490270392868309}
   - component: {fileID: 3599664054193693817}
   - component: {fileID: 3599664054193693818}
@@ -55,11 +55,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 4025873590126698686}
   animator: {fileID: 4971589878908513559}
-  perception: {fileID: 0}
+  perception: {fileID: 3467788456311001928}
   pathFollower: {fileID: 8564771326405957857}
   enemySeen:
     value: 0
   health:
+    value: 0
+  enemyDistance:
     value: 0
   timer:
     value: 0
@@ -89,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathNodes: {fileID: 0}
---- !u!114 &6276076957061498706
+--- !u!114 &3467788456311001928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,14 +100,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3599664054193693820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19df441653013b34da140ad28d9d1251, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f913895b3e73e44b9d2e5c7afb6b7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Player
-  raycastTransform: {fileID: 6227677801710792971}
   distance: 4
   angle: 80
+  raycastTransform: {fileID: 6227677801710792971}
   numRaycast: 20
+  radius: 2
 --- !u!195 &5643490270392868309
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -231,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7484972887802094023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.015, y: 0.71, z: 0.426}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3599664054193693816}
@@ -254,7 +257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb3d2fd75a98c2944b08157a7ba63046, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.904
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb3d2fd75a98c2944b08157a7ba63046, type: 3}
       propertyPath: m_LocalPosition.z
