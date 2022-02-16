@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 12
   minSpeed: 6
-  maxForce: 8
+  maxForce: 40
   turnRate: 360
   orientToMovement: 1
