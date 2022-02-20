@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Movement : MonoBehaviour
 {
     [SerializeField] protected MovementData movementData;
+    public virtual Vector3 destination { get; set; } = Vector3.zero;
 
     public float minSpeed { get { return movementData.minSpeed; } }
     public float maxSpeed { get { return movementData.maxSpeed; } }

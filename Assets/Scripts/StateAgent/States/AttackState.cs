@@ -8,12 +8,12 @@ public class AttackState : State
     {
 
     }
-
     public override void OnEnter()
     {
         owner.movement.Stop();
         owner.animator.SetTrigger("Attack");
         owner.timer.value = 1;
+        owner.GetComponent<AgentDamage>().Damage();
     }
 
     public override void OnExit()

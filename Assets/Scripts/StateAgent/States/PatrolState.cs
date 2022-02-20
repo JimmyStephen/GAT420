@@ -13,6 +13,7 @@ public class PatrolState : State
     {
         owner.pathFollower.targetNode = owner.pathFollower.pathNodes.GetNearestNode(owner.transform.position);
         owner.movement.Resume();
+        owner.timer.value = Random.Range(5, 10);
     }
 
     public override void OnExit()

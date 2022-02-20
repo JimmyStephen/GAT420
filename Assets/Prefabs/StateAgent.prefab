@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4025873590126698686}
   - component: {fileID: 8564771326405957857}
   - component: {fileID: 3467788456311001928}
+  - component: {fileID: 5363613300891930166}
   - component: {fileID: 5643490270392868309}
   - component: {fileID: 3599664054193693817}
   - component: {fileID: 3599664054193693818}
@@ -20,7 +21,7 @@ GameObject:
   - component: {fileID: 1538937637}
   m_Layer: 0
   m_Name: StateAgent
-  m_TagString: SearchAgent
+  m_TagString: Agent1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,10 +58,12 @@ MonoBehaviour:
   animator: {fileID: 4971589878908513559}
   perception: {fileID: 3467788456311001928}
   pathFollower: {fileID: 8564771326405957857}
+  atDestination:
+    value: 0
   enemySeen:
     value: 0
   health:
-    value: 0
+    value: 100
   enemyDistance:
     value: 0
   timer:
@@ -78,6 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementData: {fileID: 11400000, guid: bc5734e54417f4a43b7ca1f939d04148, type: 2}
+  navMeshAgent: {fileID: 5643490270392868309}
 --- !u!114 &8564771326405957857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathNodes: {fileID: 0}
+  pathName: PatrolPath1
 --- !u!114 &3467788456311001928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,12 +108,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f913895b3e73e44b9d2e5c7afb6b7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagName: Player
-  distance: 4
+  tagName: Agent2
+  distance: 8
   angle: 80
   raycastTransform: {fileID: 6227677801710792971}
-  numRaycast: 20
-  radius: 2
+  numRaycast: 30
+  radius: 0.5
+--- !u!114 &5363613300891930166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599664054193693820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3780272ab5ae6744bb0db4757c2ae3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Agent2
+  distance: 3
+  damage: 20
 --- !u!195 &5643490270392868309
 NavMeshAgent:
   m_ObjectHideFlags: 0

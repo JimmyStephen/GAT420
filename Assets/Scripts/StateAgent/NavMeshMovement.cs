@@ -14,6 +14,13 @@ public class NavMeshMovement : Movement
         set => navMeshAgent.velocity = value; 
     }
 
+    public override Vector3 destination
+    {
+        get => navMeshAgent.destination;
+        set => navMeshAgent.destination = value;
+    }
+
+
     void Update()
     {
         navMeshAgent.speed = movementData.maxSpeed;
