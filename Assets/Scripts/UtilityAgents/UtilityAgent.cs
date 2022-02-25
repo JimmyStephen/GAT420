@@ -51,7 +51,7 @@ public class UtilityAgent : Agent
                 }
             }
 
-            activeUtilityObject = (utilityObjects.Count == 0) ? null : utilityObjects[0];
+            activeUtilityObject = GetHighestUtilityObject(utilityObjects.ToArray());
             if(activeUtilityObject != null)
             {
                 StartCoroutine(ExecuteUtilityObject(activeUtilityObject));
@@ -144,4 +144,55 @@ public class UtilityAgent : Agent
     {
         return needs.First(need => need.type == type);
     }
+
+    UtilityObject GetHighestUtilityObject(UtilityObject[] utilityObjects)
+    {
+        UtilityObject highestUtilityObject = null;
+        float highestScore = MIN_SCORE;
+        foreach (var utilityObject in utilityObjects)
+        {
+            // get the score of the utility object
+            float temp = utilityObject.score;
+            // if score > highest score then set new highest score and highest utility object
+            if(temp > highestScore)
+            {
+                highestUtilityObject = utilityObject;
+            }
+        }
+        return highestUtilityObject;
+    }
+
+    UtilityObject GetRandomUtilityObject(UtilityObject[] utilityObjects)
+    {
+        // evaluate all utility objects
+        float[] scores = new float[utilityObjects.Length];
+        float totalScore = 0;
+        for (int i = 0; i < utilityObjects.Length; i++)
+        {
+            // <get the score of the utility objects[i]>
+            float score = utilityObjects[i].score;
+            // <set the scores[i] to the score>
+            scores[i] = score;
+            // <add score to total score>
+            totalScore += score;
+        }
+
+        // select random utility object based on score
+        // the higher the score the greater the chance of being randomly selected
+        float random = Random.Range(0, totalScore);
+        for (int i = 0; i < scores.Length; i++)
+        {
+            // <check if random value is less than scores[i]>
+            if(random < scores[i])
+            {
+                // <return utilityObjects[i] if less than>
+                return utilityObjects[i];
+            }
+            random -= scores[i];
+            // <subtract scores[i] from random value>
+        }
+
+        return null;
+    }
+
 }
