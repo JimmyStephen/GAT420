@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1466304029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466304030}
+  m_Layer: 0
+  m_Name: Eye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466304030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466304029}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.625, z: 0.125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2446920719781258686}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2446920719781258681
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,6 +50,7 @@ GameObject:
   - component: {fileID: 2159447692591568994}
   - component: {fileID: 2446920719781258683}
   - component: {fileID: 2446920719781258680}
+  - component: {fileID: 1626078592}
   m_Layer: 0
   m_Name: UtilityAgent
   m_TagString: Untagged
@@ -36,10 +67,11 @@ Transform:
   m_GameObject: {fileID: 2446920719781258681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6732120883057557933}
   - {fileID: 2446920720994725673}
+  - {fileID: 1466304030}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -120,6 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 2446920719781258683}
   animator: {fileID: 832427690054081495}
+  meter: {fileID: 0}
+  perception: {fileID: 1626078592}
 --- !u!114 &2446920719781258673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +172,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: -1
-      value: 0.9999156
+      value: 1.0000293
       inSlope: -2
       outSlope: -2
       tangentMode: 0
@@ -178,7 +212,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: -1
-      value: 0.99957365
+      value: 1.0000315
       inSlope: -0.563301
       outSlope: -0.563301
       tangentMode: 0
@@ -186,26 +220,17 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: -0.85
-      value: 0.9903711
-      inSlope: 0.09058237
-      outSlope: 0.09058237
+      time: -0.4663595
+      value: 0.6709156
+      inSlope: -1.217752
+      outSlope: -1.217752
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: -0.6
-      value: 0.98271036
-      inSlope: -0.060790945
-      outSlope: -0.060790945
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: -0.35
-      value: 0.9228273
+      time: -0.2387329
+      value: 0.3726564
       inSlope: -1.5853404
       outSlope: -1.5853404
       tangentMode: 0
@@ -213,10 +238,10 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.25
-      value: 0.11074049
-      inSlope: -1.217752
-      outSlope: -1.217752
+      time: -0.09225987
+      value: 0.24043682
+      inSlope: -0.41516998
+      outSlope: -0.41516998
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -251,12 +276,30 @@ MonoBehaviour:
   type: 2
   curve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 1
+      inSlope: -0.5
+      outSlope: -0.5
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.5
+      outSlope: -0.5
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   input: 1
-  decay: 0
+  decay: 0.1
   meter: {fileID: 0}
 --- !u!114 &5951549277086904291
 MonoBehaviour:
@@ -273,12 +316,39 @@ MonoBehaviour:
   type: 3
   curve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 1
+      inSlope: -0
+      outSlope: -0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.75907046
+      value: 0.079309344
+      inSlope: -0.5656166
+      outSlope: -0.5656166
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.95
+      value: 0
+      inSlope: -2
+      outSlope: -2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   input: 1
-  decay: 0
+  decay: 0.1
   meter: {fileID: 0}
 --- !u!114 &2159447692591568994
 MonoBehaviour:
@@ -295,12 +365,30 @@ MonoBehaviour:
   type: 4
   curve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: 1
+      inSlope: -0.5
+      outSlope: -0.5
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.5
+      outSlope: -0.5
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   input: 1
-  decay: 0
+  decay: 0.1
   meter: {fileID: 0}
 --- !u!114 &2446920719781258683
 MonoBehaviour:
@@ -338,6 +426,24 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1626078592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446920719781258681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f913895b3e73e44b9d2e5c7afb6b7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Utility
+  distance: 8
+  angle: 100
+  raycastTransform: {fileID: 1466304030}
+  numRaycast: 30
+  radius: 0.4
 --- !u!1 &2446920720994725686
 GameObject:
   m_ObjectHideFlags: 0
